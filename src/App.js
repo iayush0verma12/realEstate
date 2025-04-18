@@ -14,12 +14,14 @@ function App() {
 
   return (
     <div className="app-container" onClick={handleClick}>
+      {!isPlaying && <div className="enter-text">Enter</div>}
+      
       <video
         ref={videoRef}
         width="100%"
         height="auto"
         preload="metadata"
-        poster="/IMG001.jpeg"// optional: put this in /public too
+        poster="/IMG001.jpeg"
         style={{ cursor: "pointer" }}
       >
         <source src="/0418.mp4" type="video/mp4" />
